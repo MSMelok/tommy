@@ -4,12 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fatma Mahmoud - Teacher & Designer Portfolio">
 
     <!--=============== FAVICON ===============-->
     <link rel="shortcut icon" href="./assets/img/32x32.png" type="image/x-icon">
 
     <!--=============== REMIX ICONS ===============-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!--=============== GOOGLE FONTS ===============-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="./assets/css/styles.css">
 
@@ -19,47 +26,56 @@
 <body>
     <!--=============== HEADER PROFILE ===============-->
     <header class="profile container">
-        <i class="ri-moon-clear-fill change-theme" id="theme-button"></i>
+        <button class="theme-toggle" id="theme-button" aria-label="Toggle theme">
+            <i class="ri-moon-clear-fill"></i>
+        </button>
+        
         <div class="profile__container grid">
             <div class="profile__data">
                 <div class="profile__border">
                     <div class="profile__perfil">
-                        <img class="dp" src="./assets/img/FatmaMahmoud.png" alt="">
+                        <img class="dp" src="./assets/img/FatmaMahmoud.png" alt="Fatma Mahmoud profile photo">
                     </div>
                 </div>
-                <h2 class="profile__name">Fatma Mahmoud</h2>
-                <h3 class="profile__profession">Teacher & Designer</h3>
+                <h1 class="profile__name">Fatma Mahmoud</h1>
+                <h2 class="profile__profession">Teacher & Designer</h2>
 
                 <ul class="profile__social">
-                    <a href="https://www.instagram.com/" target="_blank" class="profile__social-link">
-                        <i class="ri-instagram-line"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/" target="_blank"
-                        class="profile__social-link">
-                        <i class="ri-linkedin-box-line"></i>
-                    </a>
-                    <a href="https://github.com/" target="_blank" class="profile__social-link">
-                        <i class="ri-github-line"></i>
-                    </a>
+                    <!-- <li>
+                        <a href="https://www.instagram.com/" target="_blank" class="profile__social-link" aria-label="Instagram">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                    </li> -->
+                    <li>
+                        <a href="https://www.linkedin.com/in/" target="_blank" class="profile__social-link" aria-label="LinkedIn">
+                            <i class="ri-linkedin-box-line"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.behance.net/" target="_blank" class="profile__social-link" aria-label="behance">
+                            <i class="ri-behance-line"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
+
             <div class="profile__info grid">
                 <div class="profile__info-group">
                     <h3 class="profile__info-number">+5</h3>
                     <p class="profile__info-description">
-                        of expriences <br> in Designing
+                        Years of<br>Experience
                     </p>
                 </div>
                 <div class="profile__info-group">
                     <h3 class="profile__info-number">+10</h3>
                     <p class="profile__info-description">
-                        Completed <br> projects
+                        Completed<br>Projects
                     </p>
                 </div>
                 <div class="profile__info-group">
                     <h3 class="profile__info-number">+20</h3>
                     <p class="profile__info-description">
-                        Satisfied <br> Customers
+                        Satisfied<br>Customers
                     </p>
                 </div>
             </div>
@@ -70,12 +86,11 @@
                 </a>
                 <div class="profile__buttons-small">
                     <a href="https://api.whatsapp.com/send?phone=+201143438405&text=Hi Fatma!"
-                        target="_blank" class="button button__small button__gray">
+                        target="_blank" class="button button__small button__gray" aria-label="WhatsApp">
                         <i class="ri-whatsapp-line"></i>
                     </a>
-                    <a href="https://m.me/UbaidullahTechnologies/" target="_blank"
-                        class="button button__small button__gray">
-                        <i class="ri-messenger-line"></i>
+                    <a href="mailto:fatmamahmoudahmed68@gmail.com" target="_blank" class="button button__small button__gray" aria-label="mail">
+                        <i class="ri-mail-line"></i>
                     </a>
                 </div>
             </div>
@@ -87,28 +102,30 @@
         <section class="filters container">
             <!--=============== FILTERS TABS ===============-->
             <ul class="filters__content">
-                <button class="filters__button " data-target="#projects" data-target="#skills">
-                    My Art
-                </button>
-
-                <button class="filters__button filter-tab-active" data-target="#skills">
-                    My Skills
-                </button>
+                <li>
+                    <button class="filters__button" data-target="#projects">
+                        My Art
+                    </button>
+                </li>
+                <li>
+                    <button class="filters__button filter-tab-active" data-target="#skills">
+                        Skills
+                    </button>
+                </li>
             </ul>
 
             <div class="filters__sections">
                 
                 <!--=============== PROJECTS ===============-->
-                <div class="projects__content grid " data-content id="projects">
+                <div class="projects__content grid" data-content id="projects">
                     <article class="projects__card">
-                        <img src="./assets/img/project_01.jpg" alt="" class="projects__img">
+                        <img src="./assets/img/project_01.jpg" alt="Black and white art project" class="projects__img">
 
                         <div class="projects__modal">
                             <div>
                                 <span class="projects__subtitle">Art 01</span>
-                                <h3 class="projects__title">black & white</h3>
-                                <a href="" 
-                                    class="projects__button button button__small">
+                                <h3 class="projects__title">Black & White</h3>
+                                <a href="#" class="projects__button button button__small">
                                     <i class="ri-link"></i>
                                 </a>
                             </div>
@@ -116,14 +133,13 @@
                     </article>
 
                     <article class="projects__card">
-                        <img src="./assets/img/project_02.jpg" alt="" class="projects__img">
+                        <img src="./assets/img/project_02.jpg" alt="Black and white art project" class="projects__img">
 
                         <div class="projects__modal">
                             <div>
                                 <span class="projects__subtitle">Art 02</span>
-                                <h3 class="projects__title">black & white</h3>
-                                <a href=""
-                                    class="projects__button button button__small">
+                                <h3 class="projects__title">Black & White</h3>
+                                <a href="#" class="projects__button button button__small">
                                     <i class="ri-link"></i>
                                 </a>
                             </div>
@@ -131,40 +147,43 @@
                     </article>
 
                     <article class="projects__card">
-                        <img src="./assets/img/project_03.jpg" alt="" class="projects__img">
+                        <img src="./assets/img/project_03.jpg" alt="Web project using only HTML" class="projects__img">
 
                         <div class="projects__modal">
                             <div>
-                                <span class="projects__subtitle">Web</span>
-                                <h3 class="projects__title">Only Html</h3>
+                                <span class="projects__subtitle">Art 03</span>
+                                <h3 class="projects__title">Black & White</h3>
                                 <a href="https://ubaidullahonlyhtml.netlify.app/"
-                                    class="projects__button button button__small">
+                                    target="_blank" class="projects__button button button__small">
                                     <i class="ri-link"></i>
                                 </a>
                             </div>
                         </div>
                     </article>
+                    
                     <article class="projects__card">
-                        <img src="./assets/img/project_04.jpg" alt="" class="projects__img">
+                        <img src="./assets/img/project_04.jpg" alt="Website Dashboard project" class="projects__img">
 
                         <div class="projects__modal">
                             <div>
-                                <span class="projects__subtitle">Web</span>
-                                <h3 class="projects__title">Website Dashboard</h3>
-                                <a href="" class="projects__button button button__small">
+                                <span class="projects__subtitle">Art 04</span>
+                                <h3 class="projects__title">Black & White</h3>
+                                <a href="#" class="projects__button button button__small">
                                     <i class="ri-link"></i>
                                 </a>
                             </div>
                         </div>
                     </article>
+                    
                     <article class="projects__card">
-                        <img src="./assets/img/project_05.jpg" alt="" class="projects__img">
+                        <img src="./assets/img/project_05.jpg" alt="Another portfolio website project" class="projects__img">
 
                         <div class="projects__modal">
                             <div>
-                                <span class="projects__subtitle">Web</span>
-                                <h3 class="projects__title">Another Portfolio Website</h3>
-                                <a href="https://ubaidullah3.netlify.app" class="projects__button button button__small">
+                                <span class="projects__subtitle">Art 05</span>
+                                <h3 class="projects__title">Black & White</h3>
+                                <a href="https://ubaidullah3.netlify.app" 
+                                   target="_blank" class="projects__button button button__small">
                                     <i class="ri-link"></i>
                                 </a>
                             </div>
@@ -174,10 +193,9 @@
 
                 <!--=============== SKILLS ===============-->
                 <div class="skills__content grid filters__active" data-content id="skills">
-
                     <div class="skills__area">
                         <h3 class="skills__title">
-                            Designing Skills
+                            Core Skills
                         </h3>
                         <div class="skills__box">
                             <div class="skills__group">
@@ -185,24 +203,24 @@
                                     <i class="ri-checkbox-circle-line"></i>
 
                                     <div>
-                                        <h3 class="skills__name">HTML</h3>
-                                        <span class="skills__level">Basic</span>
+                                        <h3 class="skills__name">Problem Solving</h3>
+                                        <span class="skills__level">VISE_VERSA</span>
                                     </div>
                                 </div>
                                 <div class="skills__data">
                                     <i class="ri-checkbox-circle-line"></i>
 
                                     <div>
-                                        <h3 class="skills__name">CSS</h3>
-                                        <span class="skills__level">Advanced</span>
+                                        <h3 class="skills__name">Analysis</h3>
+                                        <span class="skills__level">VISE_VERSA</span>
                                     </div>
                                 </div>
                                 <div class="skills__data">
                                     <i class="ri-checkbox-circle-line"></i>
 
                                     <div>
-                                        <h3 class="skills__name">JavaScript</h3>
-                                        <span class="skills__level">Intermediate</span>
+                                        <h3 class="skills__name">Creativity</h3>
+                                        <span class="skills__level">VISE_VERSA</span>
                                     </div>
                                 </div>
                             </div>
@@ -213,24 +231,24 @@
                                     <i class="ri-checkbox-circle-line"></i>
 
                                     <div>
-                                        <h3 class="skills__name">React</h3>
-                                        <span class="skills__level">Intermediate</span>
+                                        <h3 class="skills__name">Flexibility</h3>
+                                        <span class="skills__level">VISE_VERSA</span>
                                     </div>
                                 </div>
                                 <div class="skills__data">
                                     <i class="ri-checkbox-circle-line"></i>
 
                                     <div>
-                                        <h3 class="skills__name">Bootstrap</h3>
-                                        <span class="skills__level">Intermediate</span>
+                                        <h3 class="skills__name">Active Listening</h3>
+                                        <span class="skills__level">VISE_VERSA</span>
                                     </div>
                                 </div>
                                 <div class="skills__data">
                                     <i class="ri-checkbox-circle-line"></i>
 
                                     <div>
-                                        <h3 class="skills__name">Git</h3>
-                                        <span class="skills__level">Intermediate</span>
+                                        <h3 class="skills__name">Communication</h3>
+                                        <span class="skills__level">VISE_VERSA</span>
                                     </div>
                                 </div>
                             </div>
@@ -238,7 +256,7 @@
                     </div>
                     <div class="skills__area">
                         <h3 class="skills__title">
-                            Backend Developer
+                            Technical Skills
                         </h3>
                         <div class="skills__box">
                             <div class="skills__group">
@@ -246,52 +264,58 @@
                                     <i class="ri-checkbox-circle-line"></i>
 
                                     <div>
-                                        <h3 class="skills__name">PHP</h3>
-                                        <span class="skills__level">Basic</span>
+                                        <h3 class="skills__name">Computer Skills</h3>
+                                        <span class="skills__level">VISE_VERSA</span>
                                     </div>
                                 </div>
                                 <div class="skills__data">
                                     <i class="ri-checkbox-circle-line"></i>
 
                                     <div>
-                                        <h3 class="skills__name">Strapi</h3>
-                                        <span class="skills__level">Advanced</span>
+                                        <h3 class="skills__name">Customer Service</h3>
+                                        <span class="skills__level">VISE_VERSA</span>
                                     </div>
                                 </div>
                                 <div class="skills__data">
                                     <i class="ri-checkbox-circle-line"></i>
 
                                     <div>
-                                        <h3 class="skills__name">Firebase</h3>
-                                        <span class="skills__level">Basic</span>
+                                        <h3 class="skills__name">Content Managment</h3>
+                                        <span class="skills__level">VISE_VERSA</span>
                                     </div>
                                 </div>
                             </div>
 
 
                             <div class="skills__group">
-                                <!-- <div class="skills__data">
-                                        <i class="ri-checkbox-circle-line"></i>
-
-                                        <div>
-                                            <h3 class="skills__name">Python</h3>
-                                            <span class="skills__level">Intermediate</span>
-                                        </div>
-                                    </div> -->
                                 <div class="skills__data">
                                     <i class="ri-checkbox-circle-line"></i>
 
                                     <div>
-                                        <h3 class="skills__name">Node Js</h3>
-                                        <span class="skills__level">Basic</span>
+                                        <h3 class="skills__name">UI Designing</h3>
+                                        <span class="skills__level">VISE_VERSA</span>
                                     </div>
                                 </div>
+                                <div class="skills__data">
+                                    <i class="ri-checkbox-circle-line"></i>
 
+                                    <div>
+                                        <h3 class="skills__name">UX Designing</h3>
+                                        <span class="skills__level">VISE_VERSA</span>
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="ri-checkbox-circle-line"></i>
+
+                                    <div>
+                                        <h3 class="skills__name">Project Managment</h3>
+                                        <span class="skills__level">VISE_VERSA</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
     </main>
@@ -299,12 +323,12 @@
     <!--=============== FOOTER ===============-->
     <footer class="footer container">
         <span class="footer__copy">
-            &#169; Muhammad Meluk. All rights reserved
+            &copy; 2023 Fatma Mahmoud. All rights reserved.
         </span>
     </footer>
 
     <!--=============== SCROLLREVEAL ===============-->
-    <script src="./assets/js/scrollreveal.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
 
     <!--=============== MAIN JS ===============-->
     <script src="./assets/js/main.js"></script>
